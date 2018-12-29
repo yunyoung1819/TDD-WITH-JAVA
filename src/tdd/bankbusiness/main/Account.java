@@ -13,5 +13,21 @@ package tdd.bankbusiness.main;
  *  금액은 원 단위로(예: 천 원 = 1000)
  */
 public class Account {
+	private int balance;
 
+	public Account(int money) {
+		this.balance = money;
+	}
+
+	public int getBalance()  {
+		return this.balance;
+	}
+
+	public void deposit(int money) {
+		this.balance += money;
+	}
+
+	public void withdraw(int money) {
+		this.balance -= money;
+	}
 }

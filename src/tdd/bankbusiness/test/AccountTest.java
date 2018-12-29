@@ -1,5 +1,9 @@
 package tdd.bankbusiness.test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import org.junit.Before;
 import org.junit.Test;
 
 import tdd.bankbusiness.main.Account;
@@ -10,21 +14,42 @@ import tdd.bankbusiness.main.Account;
  */
 public class AccountTest {
 
+	private Account account;
+	
+	@Before
+	public void setup() {
+		account = new Account(10000);
+	}
+
+	// 계좌 생성 테스트 
 	@Test
 	public void testAccount() throws Exception {
-		Account account = new Account();
-		if (account == null) {
-			throw new Exception("계좌생성 실패");
-		}
 	}
 	
-	/* public static void main(String[] args) {
-		AccountTest test = new AccountTest();
-		try {
-			test.testAccount();		// 테스트 케이스 실행 
-		} catch (Exception e) {
-			System.out.println("실패(X)"); 	// 예외가 발생하면 실패(X)
-		}
-		System.out.println("성공(O)"); 
-	} */
+	// 잔고 조회 테스트
+	@Test
+	public void testGetBalance() throws Exception {
+		// if문 대신 asssertEquals 메소드 사용
+		assertEquals(10000, account.getBalance());
+		
+		account = new Account(1000);
+		assertEquals(1000, account.getBalance());
+		
+		account = new Account(0);
+		assertEquals(0, account.getBalance());
+	}
+	
+	// 입금 기능 테스트
+	@Test
+	public void testDeposit() throws Exception {
+		account.deposit(1000);
+		assertEquals(11000, account.getBalance());
+	}
+	
+	// 출금 기능 테스트 
+	@Test
+	public void testWithdraw() throws Exception {
+		account.withdraw(1000);
+		assertEquals(9000, account.getBalance());
+	}
 }
