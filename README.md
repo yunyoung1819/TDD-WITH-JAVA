@@ -4,7 +4,7 @@
 책 소개(http://naver.me/GaYZCDjD)
 ---------------------------------------
 
-### 위 책은 저자 분께서 https://repo.yona.io/doortts/blog/issue/1에 PDF로 공개해주셨습니다. 
+### 위 책은 저자 분께서 https://repo.yona.io/doortts/blog/issue/1 에 PDF로 공개해주셨습니다. 
 
 ### ▣ Chapter 1 테스트 주도 개발 
 - - -
