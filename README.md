@@ -116,5 +116,4 @@
  A.6 TDD 학습에 도움이 되는 책과 문헌
  ```
  
- ### ▣ License
- #### 위 책은 저자 분께서 인터넷(https://repo.yona.io/doortts/blog/issue/1) 에 PDF로 공개해주셨습니다. 
+ 
